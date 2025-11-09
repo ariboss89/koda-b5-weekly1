@@ -1,14 +1,20 @@
-let word = "Rotator";
 let out = "";
 let outBack = "";
+let result = "";
 
-for (let a = 0; a < word.length; a++) {
-  out += word[a].toLowerCase();
-  outBack += word[word.length - 1 - a].toLowerCase();
+function checkPalindrom(word) {
+  for (let a = 0; a < word.length; a++) {
+    out += word[a].toLowerCase();
+    outBack = outBack + word[word.length - 1 - a].toLowerCase();
+  }
+
+  if (out.toLowerCase() === outBack) {
+    result = "Palindrom";
+  } else {
+    result = "Bukan Palindrom";
+  }
+
+  return result;
 }
 
-if (out === outBack) {
-  console.log("Palindrom");
-} else {
-  console.log("Bukan Palindrom");
-}
+console.log(checkPalindrom("civic"));
