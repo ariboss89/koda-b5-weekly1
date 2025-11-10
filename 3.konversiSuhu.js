@@ -1,17 +1,10 @@
-const arrSuhu = [];
-
 function konversiSuhuCelciusFahrenheit(inputSuhu) {
-  arrSuhu.push(`Suhu Fahrenheit nya : ${(9 / 5* inputSuhu)+32}`);
-  return arrSuhu;
+  console.log(`Suhu Fahrenheit nya : ${(9*inputSuhu) / 5 +32}`);
 }
 
 function konversiSuhuFahrenheitCelcius(inputSuhu) {
-
-  konversiSuhuCelciusFahrenheit(inputSuhu);
-
-  arrSuhu.push(`Suhu Celcius nya : ${(5/9* inputSuhu) - 32 }`);
-
-  return arrSuhu;
+  console.log(`Suhu Celcius nya : ${((inputSuhu-32) *5) / 9 }`);
 }
 
-console.log(konversiSuhuFahrenheitCelcius(30));
+konversiSuhuCelciusFahrenheit(26);
+konversiSuhuFahrenheitCelcius(79);
