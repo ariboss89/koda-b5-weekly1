@@ -1,10 +1,17 @@
 const arrSuhu = [];
 
-function konversiSuhuFromCelcius(inputSuhu) {
-  arrSuhu.push(`Suhu reamur nya : ${(4 / 5) * inputSuhu}`);
-  arrSuhu.push(`Suhu Fahrenheitnya adalah : ${9/5*inputSuhu}`);
+function konversiSuhuCelciusFahrenheit(inputSuhu) {
+  arrSuhu.push(`Suhu Fahrenheit nya : ${(9 / 5* inputSuhu)+32}`);
+  return arrSuhu;
+}
+
+function konversiSuhuFahrenheitCelcius(inputSuhu) {
+
+  konversiSuhuCelciusFahrenheit(inputSuhu);
+
+  arrSuhu.push(`Suhu Celcius nya : ${(5/9* inputSuhu) - 32 }`);
 
   return arrSuhu;
 }
 
-console.log(konversiSuhuFromCelcius(30));
+console.log(konversiSuhuFahrenheitCelcius(30));
